@@ -29,7 +29,7 @@ object inputTest {
       //通过result.getRow来获取行键
       val key = Bytes.toString(result.getRow);
       //通过result.getValue("列族"，"列名")来获取值
-      //注意这里需要使用getBytes将字符流转化字节流
+      //这里需要使用getBytes将字符流转化字节流
       val value = Bytes.toString(result.getValue("f1".getBytes,"test".getBytes));
       println("Row key:"+key+" hf1:"+value);
     });
